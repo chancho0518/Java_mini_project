@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.text.*;
 import java.util.Date;
 
-public class ExcelRead {
+public class ExcelReader {
     public static void main(String[] args) {
         try {
             FileInputStream file = new FileInputStream(new File("src\\main\\resources\\sample\\example.xlsx"));
