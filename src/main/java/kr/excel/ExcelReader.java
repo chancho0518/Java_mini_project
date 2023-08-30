@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.text.*;
 import java.util.Date;
 
-public class Miniprj {
+public class ExcelRead {
     public static void main(String[] args) {
         try {
             FileInputStream file = new FileInputStream(new File("src\\main\\resources\\sample\\example.xlsx"));
