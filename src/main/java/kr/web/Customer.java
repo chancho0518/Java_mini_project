@@ -1,6 +1,8 @@
 package kr.web;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable {
 	// 속성
 	static int serialNums = 1;
 	
@@ -37,5 +39,16 @@ public class Customer {
 	protected void printMyInfo() {
 		System.out.printf("Customer(customerID=%s, name=%s, customerGrade=%s, bonusPoint=%d)%n",
 				this.customerID, this.name, this.customerGrade, this.bonusPoint);		
+	}
+
+	@Override
+	public String toString() {
+		return "Customer{" +
+				"customerID='" + customerID + '\'' +
+				", name='" + name + '\'' +
+				", customerGrade='" + customerGrade + '\'' +
+				", bonusPoint=" + bonusPoint +
+				", bonusPointRatio=" + bonusPointRatio +
+				'}';
 	}
 }
