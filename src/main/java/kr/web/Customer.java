@@ -3,11 +3,14 @@ package kr.web;
 import java.io.Serializable;
 
 public class Customer implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
 	// 속성
 	static int serialNums = 1;
 	
 	protected String customerID;
-	protected String name;
+	protected transient String name;
 	protected String customerGrade;
 	protected int bonusPoint;
 	protected float bonusPointRatio;

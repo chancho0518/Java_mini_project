@@ -14,14 +14,16 @@ public class Client {
 
             // 서버로 데이터를 보내기 위한 OutputStream 생성
             OutputStream outputStream = socket.getOutputStream();
-            PrintWriter clientPrintWriter = new PrintWriter(outputStream, true);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
 
             // 서버로 부터 데이터를 받기 위한 InputStream 생성
             InputStream inputStream = socket.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
             // 서버로 메세지 전송
-            clientPrintWriter.println("id1222, 홍길동");
+            Customer customer = new Customer("Id1223", "나길동");
+            objectOutputStream.writeObject(customer);
+            outputStream.flush();
 
             // 서버로 부터 받은 응답
             String response = bufferedReader.readLine();
