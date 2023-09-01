@@ -21,11 +21,11 @@ public class Client {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
             // 서버로 메세지 전송
-            clientPrintWriter.println("Client 요청!!!");
+            clientPrintWriter.println("id1222, 홍길동");
 
             // 서버로 부터 받은 응답
             String response = bufferedReader.readLine();
-            System.out.println("서버로 부터 받은 응답: " + response);
+            System.out.println("서버 응답(고객 리스트): " + response);
 
             System.out.println("Clinet가 종료되었습니다!!");
 
