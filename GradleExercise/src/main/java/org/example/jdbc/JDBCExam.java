@@ -17,7 +17,7 @@ public class JDBCExam {
     public static void main(String[] args) {
 
 
-        try(// Connerction 생성
+        try(// Connection 생성
             Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
             Statement statement = connection.createStatement();
             ) {
